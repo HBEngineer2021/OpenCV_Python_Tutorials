@@ -1,105 +1,671 @@
 # OpenCV_Python_Tutorials
 
 目次
+<details><summary>ここをタップすると目次が見れます👀</summary>
+  
 - [フィルタの種類](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E7%A8%AE%E9%A1%9E)
-
+  - [平均化フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [重み付き平均化フィルタ（加重平均フィルタ）](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%8D%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%8A%A0%E9%87%8D%E5%B9%B3%E5%9D%87%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ガウシアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [微分フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E5%BE%AE%E5%88%86%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ソーベルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%BD%E3%83%BC%E3%83%99%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [プリューウィットフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%97%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%A6%E3%82%A3%E3%83%83%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ロバーツフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%AD%E3%83%90%E3%83%BC%E3%83%84%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [2次微分フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#2%E6%AC%A1%E5%BE%AE%E5%88%86%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ラプラシアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%A9%E3%83%97%E3%83%A9%E3%82%B7%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ゼロ交差](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%BC%E3%83%AD%E4%BA%A4%E5%B7%AE)
+  - [LoGフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#log%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [アンシャープマスキング](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%A2%E3%83%B3%E3%82%B7%E3%83%A3%E3%83%BC%E3%83%97%E3%83%9E%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%B0)
+  - [鮮鋭化フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%AE%AE%E9%8B%AD%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [k最近隣平均化フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#k%E6%9C%80%E8%BF%91%E9%9A%A3%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [バイラテラルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%90%E3%82%A4%E3%83%A9%E3%83%86%E3%83%A9%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ノンローカルミーンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%8E%E3%83%B3%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [メディアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [モザイク処理](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%E5%87%A6%E7%90%86)
+  - [ローパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ハイパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%8F%E3%82%A4%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [バンドパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%90%E3%83%B3%E3%83%89%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [バンドエリミネーションフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%90%E3%83%B3%E3%83%89%E3%82%A8%E3%83%AA%E3%83%9F%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [高域強調フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%AB%98%E5%9F%9F%E5%BC%B7%E8%AA%BF%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ウィーナフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%A6%E3%82%A3%E3%83%BC%E3%83%8A%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [逆フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%80%86%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ジョイントバイラテラルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%B8%E3%83%A7%E3%82%A4%E3%83%B3%E3%83%88%E3%83%90%E3%82%A4%E3%83%A9%E3%83%86%E3%83%A9%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ガイデットフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AC%E3%82%A4%E3%83%87%E3%83%83%E3%83%88%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ガボールフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AC%E3%83%9C%E3%83%BC%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ベイジアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%99%E3%82%A4%E3%82%B8%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [カルマンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [パーティクルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%AF%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+  - [ブーストラップフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%96%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+</details>
+  
 ## フィルタの種類
 
-- 平均化フィルタ
+### 平均化フィルタ
+  
+  - OpenCV関数
+  ```
+  cv2.blur(img, ksize)
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  ddepth = -1
+    
+  # カーネルサイズ【3 × 3】の場合
+  kernel = np.array([[1/9,1/9,1/9],
+                       [1/9,1/9,1/9],
+                       [1/9,1/9,1/9]])
+    
+  dst = cv2.filter2D(img, ddepth, kernel)
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  imageName = input("画像名を入力するしてください。\n")
+  
+  img = cv2.imread("./img/" + imageName)
+  
+  a = int(input("カーネルサイズaを入力。\n"))
+  b = int(input("カーネルサイズbを入力。\n"))
+  ksize = (a, b)
 
+  dst = cv2.blur(img, ksize)
+  
+  outputImage = input("画像名を入力するしてください。\n")
+  
+  cv2.imwrite("./img/" + outputImage, dst)
+  ```
+  </details>
 
-- 重み付き平均化フィルタ（加重平均フィルタ）
+### 重み付き平均化フィルタ（加重平均フィルタ）
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ガウシアンフィルタ
+### ガウシアンフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- 微分フィルタ
+### 微分フィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ソーベルフィルタ
+### ソーベルフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- プリューウィットフィルタ
+### プリューウィットフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ロバーツフィルタ
+### ロバーツフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- 2次微分フィルタ
+### 2次微分フィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ラプラシアンフィルタ
+### ラプラシアンフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ゼロ交差
+### ゼロ交差
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- LoGフィルタ
+### LoGフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- アンシャープマスキング
+### アンシャープマスキング
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- 鮮鋭化フィルタ
+### 鮮鋭化フィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- k最近隣平均化フィルタ
+### k最近隣平均化フィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- バイラテラルフィルタ
+### バイラテラルフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ノンローカルミーンフィルタ
+### ノンローカルミーンフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- メディアンフィルタ
+### メディアンフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- モザイク処理
+### モザイク処理
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ローパスフィルタ
+### ローパスフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- ハイパスフィルタ
+### ハイパスフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
-- バンドパスフィルタ
+### バンドパスフィルタ
 
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
+  
+### バンドエリミネーションフィルタ
 
-- バンドエリミネーションフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### 高域強調フィルタ
 
-- 高域強調フィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ウィーナフィルタ
 
-- ウィーナフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### 逆フィルタ
 
-- 逆フィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ジョイントバイラテラルフィルタ
 
-- ジョイントバイラテラルフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ガイデットフィルタ
 
-- ガイデットフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ガボールフィルタ
 
-- ガボールフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ベイジアンフィルタ
 
-- ベイジアンフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### カルマンフィルタ
 
-- カルマンフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### パーティクルフィルタ
 
-- パーティクルフィルタ
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
+### ブーストラップフィルタ
 
-- ブーストラップフィルタ
-
+  - OpenCV関数
+  ```
+  
+  ```
+  
+  - OpenCV関数 + numpy
+  ```
+  
+  ```
+  
+  <details><summary>サンプルコード</summary>
+  
+  ```py
+  
+  ```
+  </details>
 
 ## リンク
 - [OpenCVを使った画像処理](http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_imgproc/py_table_of_contents_imgproc/py_table_of_contents_imgproc.html#py-table-of-content-imgproc)

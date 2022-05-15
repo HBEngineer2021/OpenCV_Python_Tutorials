@@ -87,13 +87,53 @@
   
   - OpenCV関数 + numpy
   ```
-  
+  # カーネルサイズ【3 × 3】の場合
+  kernel = np.array([[1,2,1],
+                     [2,4,2],
+                     [1,2,1]], np.float32)/16
+                       
+  # カーネルサイズ【5 × 5】の場合
+  kernel = np.array([[1,4,6,4,1],
+                     [4,16,24,16,4],
+                     [6,24,36,24,6],
+                     [4,16,24,16,4],
+                     [1,4,6,4,1]], np.float32)/256
+    
+  dst = cv2.filter2D(img, ddepth, kernel)
   ```
   
   <details><summary>サンプルコード</summary>
   
   ```py
+  ddepth = -1
+    
+  # カーネルサイズ【3 × 3】の場合
+  kernel = np.array([[1,2,1],
+                     [2,4,2],
+                     [1,2,1]], np.float32)/16
+    
+  dst = cv2.filter2D(img, ddepth, kernel)
+    
+  outputImage = input("画像名を入力するしてください。\n")
+    
+  cv2.imwrite("./img/" + outputImage, dst)
+  ```
   
+  ```py
+  ddepth = -1
+  
+  # カーネルサイズ【5 × 5】の場合
+  kernel = np.array([[1,4,6,4,1],
+                     [4,16,24,16,4],
+                     [6,24,36,24,6],
+                     [4,16,24,16,4],
+                     [1,4,6,4,1]], np.float32)/256
+    
+  dst = cv2.filter2D(img, ddepth, kernel)
+    
+  outputImage = input("画像名を入力するしてください。\n")
+    
+  cv2.imwrite("./img/" + outputImage, dst)
   ```
   </details>
 

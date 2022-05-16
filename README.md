@@ -183,7 +183,7 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
+  ```py
   # 横の場合
   kernel = np.array([[-1,0,1],
                      [-2,0,2],
@@ -349,8 +349,24 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
+  ```py
+  # 入力画像
+  img = cv2.imread("./path")
   
+  # 平滑化
+  kernel = np.array([[1/9, 1/9, 1/9],
+                     [1/9, 1/9, 1/9],
+                     [1/9, 1/9, 1/9]])
+  
+  # 平均化フィルタ
+  average = cv2.filter2D(img, -1, kernel)
+  
+  # 入力画像 - 平均化フィルタの差分画像
+  diff = img - average
+  
+  # diffをk倍してから、入力画像を加算する（鮮鋭化フィルタ）
+  k = 9
+  sharpen = img + k * diff
   ```
   
   <details><summary>サンプルコード</summary>

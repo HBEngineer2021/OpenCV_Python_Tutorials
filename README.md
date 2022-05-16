@@ -43,12 +43,12 @@
 ### 平均化フィルタ
   
   - OpenCV関数
-  ```
+  ```py
   cv2.blur(img, ksize)
   ```
   
   - OpenCV関数 + numpy
-  ```
+  ```py
   ddepth = -1
     
   # カーネルサイズ【3 × 3】の場合
@@ -86,7 +86,7 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
+  ```py
   # カーネルサイズ【3 × 3】の場合
   kernel = np.array([[1,2,1],
                      [2,4,2],
@@ -178,13 +178,20 @@
 ### ソーベルフィルタ
 
   - OpenCV関数
-  ```
+  ```py
   
   ```
   
   - OpenCV関数 + numpy
   ```
-  
+  # 横の場合
+  kernel = np.array([[-1,0,1],
+                     [-2,0,2],
+                     [-1,0,1]])
+  # 縦の場合
+  kernel = np.array([[-1,-2,-1],
+                     [0,0,0],
+                     [1,2,1]])
   ```
   
   <details><summary>サンプルコード</summary>
@@ -259,8 +266,15 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
-  
+  ```py
+  # 4近傍
+  kernel = np.array([[0,1,0],
+                     [1,-4,1],
+                     [0,1,0]])
+  # 8近傍
+  kernel = np.array([[1,1,1]
+                     [1,-8,1],
+                     [1,1,1]])
   ```
   
   <details><summary>サンプルコード</summary>

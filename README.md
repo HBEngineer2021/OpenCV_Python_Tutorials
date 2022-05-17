@@ -350,6 +350,19 @@
   
   - OpenCV関数 + numpy
   ```py
+  ddepth = -1
+  
+  k = 9
+  
+  # カーネルサイズ【3 × 3】の場合
+  kernel = np.array([[-k/9, -k/9, -k/9],
+                     [-k/9, 1 + 8/9 * k, -k/9],
+                     [-k/9, -k/9, -k/9]])
+  
+  dst = cv2.filter2D(img, ddepth, kernel)
+  ```
+  
+  ```py
   # 入力画像
   img = cv2.imread("./path")
   

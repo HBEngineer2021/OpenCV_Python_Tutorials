@@ -140,12 +140,12 @@
 ### ガウシアンフィルタ
 
   - OpenCV関数
-  ```
+  ```py
   
   ```
   
   - OpenCV関数 + numpy
-  ```
+  ```py
   ddepth = -1
   
   # カーネルサイズ【3 × 3】の場合
@@ -171,8 +171,32 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
-  
+  ```py
+  # 横方向
+  kernel_x = np.array([[0, 0, 0],
+                    [0, -1, 1],
+                    [0, 0, 0]])
+                    
+  kernel_x = np.array([[0, 0, 0],
+                    [-1, 1, 0],
+                    [0, 0, 0]])
+                    
+  kernel_x = np.array([[0, 0, 0],
+                     [-1/2, 0, 1/2],
+                     [0, 0, 0]])
+                     
+  # 縦方向
+  kernel_y = np.array([[0, 1, 0],
+                    [0, -1, 0],
+                    [0, 0, 0]])
+                    
+  kernel_y = np.array([[0, 0, 0],
+                    [0, 1, 0],
+                    [0, -1, 0]])
+                    
+  kernel_y = np.array([[0, 1/2, 0],
+                     [0, 0, 0],
+                     [0, -1/2, 0]])
   ```
   
   <details><summary>サンプルコード</summary>
@@ -192,11 +216,11 @@
   - OpenCV関数 + numpy
   ```py
   # 横の場合
-  kernel = np.array([[-1,0,1],
+  kernel_x = np.array([[-1,0,1],
                      [-2,0,2],
                      [-1,0,1]])
   # 縦の場合
-  kernel = np.array([[-1,-2,-1],
+  kernel_y = np.array([[-1,-2,-1],
                      [0,0,0],
                      [1,2,1]])
   ```
@@ -211,13 +235,19 @@
 ### プリューウィットフィルタ
 
   - OpenCV関数
-  ```
-  
-  ```
+  ```py
   
   - OpenCV関数 + numpy
+  ```py
+  # 横方向
+  kernel_x = np.array([[-1,0,1],
+                       [-1,0,1],
+                       [-1,0,1]])
+  # 縦方向
+  kernel_y = np.array([[1,1,1],
+                       [0,0,0],
+                       [-1,-1,-1]])
   ```
-  
   ```
   
   <details><summary>サンプルコード</summary>
@@ -254,8 +284,15 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
-  
+  ```py
+  # 横方向
+  kernel = np.array([[0,0,0],
+                     [1,-2,1],
+                     [0,0,0]])
+  # 縦方向
+  kernel = np.array([[0,1,0],
+                     [0,-2,0],
+                     [0,1,0]])
   ```
   
   <details><summary>サンプルコード</summary>
@@ -759,5 +796,5 @@
 
 ## リンク
 - [OpenCVを使った画像処理](http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_imgproc/py_table_of_contents_imgproc/py_table_of_contents_imgproc.html#py-table-of-content-imgproc)
-
 - [Python/OpenCV】空間フィルタリングで平滑化・輪郭検出](https://algorithm.joho.info/programming/python/opencv-spatial-filter/)
+- [Pythonによる画像処理100本ノック#9 ガウシアンフィルタ](https://qiita.com/muro5866/items/f55ec1eaccdda462bde6)

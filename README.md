@@ -1,9 +1,14 @@
 # OpenCV_Python_Tutorials
 
 目次
-<details><summary>ここをタップすると目次が見れます👀</summary>
+- [使用環境]()
+  <details><summary>環境一覧</summary>
+  
+  </details>
   
 - [フィルタの種類](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E7%A8%AE%E9%A1%9E)
+  <details><summary>フィルタ一覧</summary>
+  
   - [平均化フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [重み付き平均化フィルタ（加重平均フィルタ）](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%8D%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%8A%A0%E9%87%8D%E5%B9%B3%E5%9D%87%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [ガウシアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
@@ -37,6 +42,31 @@
   - [パーティクルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%AF%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [ブーストラップフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%96%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
 </details>
+
+- [幾何学的変換]()
+  <details><summary>幾何学的変換一覧</summary>
+  
+  </details>
+  
+- [物体検出]()
+  <details><summary>物体検出一覧</summary>
+  
+  </details>
+  
+- [機械学習]()
+  <details><summary>機械学習一覧</summary>
+  
+  </details>
+  
+- [動画像処理]()
+  <details><summary>動画像処理一覧</summary>
+  
+  </details>
+  
+- [パターン認識]()
+  <details><summary>パターン認識一覧</summary>
+  
+  </details>
   
 ## フィルタの種類
 
@@ -237,6 +267,7 @@
   - OpenCV関数
   ```py
   
+  ```
   - OpenCV関数 + numpy
   ```py
   # 横方向
@@ -247,7 +278,6 @@
   kernel_y = np.array([[1,1,1],
                        [0,0,0],
                        [-1,-1,-1]])
-  ```
   ```
   
   <details><summary>サンプルコード</summary>

@@ -68,7 +68,7 @@
   
   </details>
 
-- [リンク]()
+- [リンク](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials/blob/develop/README.md#%E3%83%AA%E3%83%B3%E3%82%AF)
 
 ## 使用環境
 

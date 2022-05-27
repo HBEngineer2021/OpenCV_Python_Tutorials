@@ -357,7 +357,7 @@
                      [1,-4,1],
                      [0,1,0]])
   # 8近傍
-  kernel = np.array([[1,1,1]
+  kernel = np.array([[1,1,1],
                      [1,-8,1],
                      [1,1,1]])
   ```
@@ -396,8 +396,12 @@
   ```
   
   - OpenCV関数 + numpy
-  ```
-  
+  ```py
+  kernel = np.array([[0, 0, 1, 0, 0],
+                     [0, 1, 2, 1, 0],
+                     [1, 2, -16, 2, 1],
+                     [0, 1, 2, 1, 0],
+                     [0, 0, 1, 0, 0]])
   ```
   
   <details><summary>サンプルコード</summary>
@@ -534,8 +538,8 @@
 ### メディアンフィルタ
 
   - OpenCV関数
-  ```
-  
+  ```py
+  dst = cv2.medianBlur(gray, ksize=13)
   ```
   
   - OpenCV関数 + numpy
@@ -578,7 +582,32 @@
   
   - OpenCV関数 + numpy
   ```
-  
+   # 高速フーリエ変換(2次元)
+    src = np.fft.fft2(src)
+    
+    # 画像サイズ
+    h, w = src.shape
+   
+    # 画像の中心座標
+    cy, cx =  int(h/2), int(w/2)
+    
+    # フィルタのサイズ(矩形の高さと幅)
+    rh, rw = int(a*cy), int(a*cx)
+
+    # 第1象限と第3象限、第1象限と第4象限を入れ替え
+    fsrc =  np.fft.fftshift(src)  
+
+    # 入力画像と同じサイズで値0の配列を生成
+    fdst = np.zeros(src.shape, dtype=complex)
+
+    # 中心部分の値だけ代入（中心部分以外は0のまま）
+    fdst[cy-rh:cy+rh, cx-rw:cx+rw] = fsrc[cy-rh:cy+rh, cx-rw:cx+rw]
+    
+    # 第1象限と第3象限、第1象限と第4象限を入れ替え(元に戻す)
+    fdst =  np.fft.fftshift(fdst)
+
+    # 高速逆フーリエ変換 
+    dst = np.fft.ifft2(fdst)
   ```
   
   <details><summary>サンプルコード</summary>
@@ -849,3 +878,4 @@
 - [Pythonで画像をフーリエ変換してフィルタをかけてみた](http://radiology-technologist.info/post-1594)
 - [python+opencvで画像処理の勉強4 周波数領域におけるフィルタリング](https://qiita.com/tanaka_benkyo/items/bfa35e7f08faa7b7a985)
 - [ディジタル画像処理~pythonによる空間フィルタリングpart2~](https://lp-tech.net/articles/VG30d)
+- [pythonで一から画像処理 (5)フーリエ変換](https://qiita.com/fugunoko/items/41c33ca163c7bb52d283)

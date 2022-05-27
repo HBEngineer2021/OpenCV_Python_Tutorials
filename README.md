@@ -1,6 +1,9 @@
 # OpenCV_Python_Tutorials
 
-目次
+画像処理エンジニア検定の学習用に作成。
+
+## 目次
+
 - [使用環境]()
   <details><summary>環境一覧</summary>
   

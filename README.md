@@ -4,7 +4,7 @@
 
 ## 目次
 
-- [使用環境]()
+- [インストール]()
   <details><summary>環境一覧</summary>
   
   </details>
@@ -73,11 +73,16 @@
 
 - [リンク](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials/blob/develop/README.md#%E3%83%AA%E3%83%B3%E3%82%AF)
 
-## 使用環境
+## インストール
+
+MacOSの場合は、Pythonが既にインストール済みなっていますが、
+Windowsの場合は、インストールされていないのでPythonの導入作業が必要になります。
+
+プログラムを動かす際は、Anacondaという統合開発環境の中にあるSpyderが必要になります。
+
+### Pythonのインストール（Windowsのみ）
 
 ### IDE（統合開発環境）
-
-### 
 
 ## フィルタの種類
 

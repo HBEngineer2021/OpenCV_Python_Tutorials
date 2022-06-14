@@ -8,6 +8,13 @@
   <details><summary>環境一覧</summary>
   
   </details>
+- [2値化処理]()
+  <details><summary>2値化処理一覧</summary>
+  
+  - [p-タイル法]()
+  - [モード法]()
+  - [判別分析法]()
+  </details>
   
 - [フィルタの種類](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E7%A8%AE%E9%A1%9E)
   <details><summary>フィルタ一覧</summary>

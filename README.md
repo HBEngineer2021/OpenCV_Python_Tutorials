@@ -1,19 +1,47 @@
+
+![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)
+![python-logo](https://www.python.org/static/img/python-logo.png)
+
 # OpenCV_Python_Tutorials
 
-画像処理エンジニア検定の学習用に作成。
+![python](https://img.shields.io/badge/python-v3.7-84a2d4.svg)
+![opencv](https://img.shields.io/badge/OpenCV-v3.7-ff7964.svg)
+![anaconda](https://img.shields.io/badge/Anaconda-v3.7-2f5d50.svg)
+![pycharm](https://img.shields.io/badge/PyCharm-v3.7-3eb370.svg)
+
+画像処理エンジニア検定の学習用に作成しました。
+
+画像処理エンジニア検定の詳細は、以下のリンクを参照して下さい。
+
+https://www.cgarts.or.jp/kentei/about/img_engineer/index.html
 
 ## 目次
 
 <details><summary>環境構築</summary>
   
 - [環境構築]()
-  - [インストール]()
+  - [Pythonのインストール（Windowsのみ）]()
+  - [IDE（統合開発環境）のインストール]()
     - [Anaconde（Spyder）]()
+      - [Windows]()
+      - [Mac]()
     - [PyCharm]()
+      - [Windows]()
+      - [Mac]()
+  - [OpenCVのインストール]()
+</details>
+
+<details><summary>OpenCVの基本操作</summary>
+  
+- [OpenCVの基本操作]()
+  - [画像の読み込み]()
+  - [画像の保存]()
+  - [画像の表示]()
+  - []()
   
 </details>
-  
-<details><summary>環境一覧</summary>
+
+<details><summary>濃淡変換</summary>
   
 - [濃淡変換]()
   - [トーンカーブ]()
@@ -189,28 +217,9 @@
 <details><summary>リンク</summary>
 
 - [リンク](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials/blob/develop/README.md#%E3%83%AA%E3%83%B3%E3%82%AF)
-  - [OpenCVを使った画像処理](http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_imgproc/py_table_of_contents_imgproc/py_table_of_contents_imgproc.html#py-table-of-content-imgproc)
-  - [ディジタル画像処理[改訂第二版]](https://www.amazon.co.jp/%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86-%E6%94%B9%E8%A8%82%E7%AC%AC%E4%BA%8C%E7%89%88-%E3%83%87%E3%82%A3%E3%82%B8%E3%82%BF%E3%83%AB%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E7%B7%A8%E9%9B%86%E5%A7%94%E5%93%A1%E4%BC%9A/dp/490347464X/ref=pd_bxgy_img_sccl_1/356-9064990-2117365?pd_rd_w=dD6jK&content-id=amzn1.sym.918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_p=918446e7-72f4-48c7-a672-af3b6ace2b19&pf_rd_r=2WM90KY8AW2P6GR3FZ8B&pd_rd_wg=lQuBK&pd_rd_r=cbe5acb2-b8f8-42a6-85f7-10d1b366d839&pd_rd_i=490347464X&psc=1)
-  - [画像処理エンジニア検定 エキスパート・ベーシック公式問題集[改訂第四版]](https://www.amazon.co.jp/%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E6%A4%9C%E5%AE%9A-%E3%82%A8%E3%82%AD%E3%82%B9%E3%83%91%E3%83%BC%E3%83%88%E3%83%BB%E3%83%99%E3%83%BC%E3%82%B7%E3%83%83%E3%82%AF%E5%85%AC%E5%BC%8F%E5%95%8F%E9%A1%8C%E9%9B%86-%E6%94%B9%E8%A8%82%E7%AC%AC%E5%9B%9B%E7%89%88-%E7%94%BB%E5%83%8F%E5%87%A6%E7%90%86%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E6%A4%9C%E5%AE%9A%E5%95%8F%E9%A1%8C%E9%9B%86%E7%B7%A8%E9%9B%86%E5%A7%94%E5%93%A1%E4%BC%9A/dp/4903474658)
-  - [Python/OpenCV】空間フィルタリングで平滑化・輪郭検出](https://algorithm.joho.info/programming/python/opencv-spatial-filter/)
-  - [Pythonによる画像処理100本ノック#9 ガウシアンフィルタ](https://qiita.com/muro5866/items/f55ec1eaccdda462bde6)
-  - [画像処理フィルタ一覧、比較 ](https://imagingsolution.net/imaging/filter-algorithm/)
-  - [画像フィルタ～より容易な欠陥検出のために（前編）](https://www.visco-tech.com/newspaper/column/detail19/)
-  - [デジタル画像処理（空間フィルタリング）](https://qiita.com/deneimonmaru/items/4b68220f0b7ed8e3f320)
-  - [前処理フィルタについて](https://www.keyence.co.jp/ss/products/vision/visionbasics/basic/soft/filter.jsp)
-  - [【図解】画像処理の6つの種類をご紹介。画像処理メーカー7社厳選](https://jss1.jp/column/column_78/#i-9)
-  - [画像認識の技術ブログ | マクセルフロンティア株式会社](https://www.frontier.maxell.co.jp/blog/index.html)
-  - [パッシブフィルタ ガイド周波数フィルタの基礎知識](https://jp.rs-online.com/web/generalDisplay.html?id=ideas-and-advice/passive-filters-guide)
-  - [Pythonで画像をフーリエ変換してフィルタをかけてみた](http://radiology-technologist.info/post-1594)
-  - [python+opencvで画像処理の勉強4 周波数領域におけるフィルタリング](https://qiita.com/tanaka_benkyo/items/bfa35e7f08faa7b7a985)
-  - [ディジタル画像処理~pythonによる空間フィルタリングpart2~](https://lp-tech.net/articles/VG30d)
-  - [pythonで一から画像処理 (5)フーリエ変換](https://qiita.com/fugunoko/items/41c33ca163c7bb52d283)
-  - [PythonのSciPyでバンドストップフィルタをかける!](https://watlab-blog.com/2019/05/01/scipy-bandstop/)
-  - [What parameters can a fourier transformation have? / How to process the shifted result?](https://stackoverflow.com/questions/34841808/what-parameters-can-a-fourier-transformation-have-how-to-process-the-shifted)
-  - [2値化処理 – blog - 村上真研究室](http://makotomurakami.com/blog/2020/08/06/6534/)
 </details>
 
-## インストール
+## 環境構築
 
 MacOSの場合は、Pythonが既にインストール済みなっていますが、
 Windowsの場合は、インストールされていないのでPythonの導入作業が必要になります。
@@ -221,10 +230,158 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 ### IDE（統合開発環境）
 
+#### Anaconda
+
+#### PyCharm
+
+## 濃淡変換
+
+### トーンカーブ
+
+#### 概要
+
+### 折れ線型トーンカーブ
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### 累乗型トーカーブ
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### S字トーンカーブ
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### ヒストグラム平坦化
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+### 濃淡の反転
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### ポスタリゼーション
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+### ソラリゼーション
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### RGB トーンカーブ
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### 疑似カラー
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### 色相・彩度・明度
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### 画像間演算
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+### マスク処理
+
+#### 概要
+
+#### 処理手順
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
 ## 空間フィルタリング
 
 ### 平均化フィルタ
-  
+
+#### 概要
+
   - OpenCV関数
   ```py
   cv2.blur(img, ksize)
@@ -241,6 +398,22 @@ Windowsの場合は、インストールされていないのでPythonの導入�
     
   dst = cv2.filter2D(img, ddepth, kernel)
   ```
+
+#### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
   
   <details><summary>サンプルコード</summary>
   
@@ -284,7 +457,23 @@ Windowsの場合は、インストールされていないのでPythonの導入�
     
   dst = cv2.filter2D(img, ddepth, kernel)
   ```
-  
+
+#### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
   <details><summary>サンプルコード</summary>
   
   ```py
@@ -338,7 +527,22 @@ Windowsの場合は、インストールされていないのでPythonの導入�
   
   dst = cv2.filter2D(img, ddepth, kernel)
   ```
-  
+#### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
   <details><summary>サンプルコード</summary>
   
   ```py
@@ -381,7 +585,23 @@ Windowsの場合は、インストールされていないのでPythonの導入�
                      [0, 0, 0],
                      [0, -1/2, 0]])
   ```
-  
+
+#### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
   <details><summary>サンプルコード</summary>
   
   ```py
@@ -407,7 +627,23 @@ Windowsの場合は、インストールされていないのでPythonの導入�
                      [0,0,0],
                      [1,2,1]])
   ```
-  
+
+#### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
   <details><summary>サンプルコード</summary>
   
   ```py
@@ -1194,3 +1430,5 @@ p-タイル法は、画像中の文字を占める領域の画像数が、文字
 - [PythonのSciPyでバンドストップフィルタをかける!](https://watlab-blog.com/2019/05/01/scipy-bandstop/)
 - [What parameters can a fourier transformation have? / How to process the shifted result?](https://stackoverflow.com/questions/34841808/what-parameters-can-a-fourier-transformation-have-how-to-process-the-shifted)
 - [2値化処理 – blog - 村上真研究室](http://makotomurakami.com/blog/2020/08/06/6534/)
+- [python+opencvで画像処理の勉強2 画素ごとの濃淡変換](https://qiita.com/tanaka_benkyo/items/11a9b99b4703516711e3)
+- [matplotlib – 画像やヒートマップを表示する imshow の使い方](https://pystyle.info/matplotlib-imshow/)

@@ -4,13 +4,20 @@
 
 ## 目次
 
-- [使用環境]()
+- [インストール]()
   <details><summary>環境一覧</summary>
   
   </details>
+- [2値化処理]()
+  <details><summary>2値化処理一覧</summary>
   
-- [フィルタの種類](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E7%A8%AE%E9%A1%9E)
-  <details><summary>フィルタ一覧</summary>
+  - [p-タイル法]()
+  - [モード法]()
+  - [判別分析法]()
+  </details>
+  
+- [空間フィルタリング](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E3%81%AE%E7%A8%AE%E9%A1%9E)
+  <details><summary>空間フィルタリングの種類</summary>
   
   - [平均化フィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [重み付き平均化フィルタ（加重平均フィルタ）](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E9%87%8D%E3%81%BF%E4%BB%98%E3%81%8D%E5%B9%B3%E5%9D%87%E5%8C%96%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF%E5%8A%A0%E9%87%8D%E5%B9%B3%E5%9D%87%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
@@ -30,6 +37,11 @@
   - [ノンローカルミーンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%8E%E3%83%B3%E3%83%AD%E3%83%BC%E3%82%AB%E3%83%AB%E3%83%9F%E3%83%BC%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [メディアンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%A1%E3%83%87%E3%82%A3%E3%82%A2%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [モザイク処理](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%A2%E3%82%B6%E3%82%A4%E3%82%AF%E5%87%A6%E7%90%86)
+</details>
+
+- [周波数フィルタリング]()
+  <details><summary>周波数フィルタリングの種類</summary>
+  
   - [ローパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%AD%E3%83%BC%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [ハイパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%8F%E3%82%A4%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [バンドパスフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%90%E3%83%B3%E3%83%89%E3%83%91%E3%82%B9%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
@@ -44,7 +56,7 @@
   - [カルマンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [パーティクルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%AF%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [ブーストラップフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%96%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
-</details>
+  </details>
 
 - [幾何学的変換]()
   <details><summary>幾何学的変換一覧</summary>
@@ -73,11 +85,91 @@
 
 - [リンク](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials/blob/develop/README.md#%E3%83%AA%E3%83%B3%E3%82%AF)
 
-## 使用環境
+## インストール
+
+MacOSの場合は、Pythonが既にインストール済みなっていますが、
+Windowsの場合は、インストールされていないのでPythonの導入作業が必要になります。
+
+プログラムを動かす際は、Anacondaという統合開発環境の中にあるSpyderが必要になります。
+
+### Pythonのインストール（Windowsのみ）
 
 ### IDE（統合開発環境）
 
-### 
+## 2値化処理
+
+### p-タイル法
+
+#### 概要
+p-タイル法は、画像中の文字を占める領域の画像数が、文字の大きさと撮影条件からあらかじめ予測できる場合に、予測された画素数に応じて閾値を決める手法である。p-タイル法では、
+画素数を超えたときの画素値（また、超える直前の画素数）をしきい値とする。この手法は、対象画像に対する事前の知識が必要なため、未知の画像を処理する場合には適していない。
+
+#### 処理手順
+1．入力画像にグレースケールを掛ける。
+
+2．入力画像の面積比を求める。
+
+3．累積和で画素値を計算する。
+
+4．画素数を超えたときの画素値をしきい値に設定する。
+
+#### 実行結果
+
+|ヒストグラム（閾値：100）|
+| - |
+| ![Figure_p_tile](https://user-images.githubusercontent.com/61136190/173852948-f531b868-3ded-4b84-902c-6beef662e1e9.png) |
+
+| 入力画像 | 実行結果 |
+| - | - |
+| ![入力画像](https://user-images.githubusercontent.com/61136190/173845134-56aa0453-2124-4c68-8ffc-deea4a798666.jpg) | ![実行結果](https://user-images.githubusercontent.com/61136190/173843088-227a0627-1eb2-4606-9c30-54fdf684e1d4.jpg) |
+
+### モード法
+
+#### 概要
+モード法は、山と山の間の谷が2つを分離するよい手がかりと考え、その谷の底を閾値とする。しかし、この方法は、画像に十分な画素数がないとノイズによって山や谷がはっきりと現れないため、谷の底を自動かつ安定に検出することが困難になり、応用に応じて工夫する必要がある。ほとんど場合、応用ごとにノイズによる影響を軽減する経験に基づいて処理を加えることが多い。
+#### 処理手順
+
+1．入力画像にグレースケールを掛ける。
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+|ヒストグラム（最小値：80, 最大値：200, 閾値：96）|
+| - |
+| ![Figure_mode](https://user-images.githubusercontent.com/61136190/173852702-e9dd6bd0-6787-4a26-9d3a-33018401383b.png) |
+
+| 入力画像 | 実行結果 |
+| - | - |
+| ![入力画像](https://user-images.githubusercontent.com/61136190/173845134-56aa0453-2124-4c68-8ffc-deea4a798666.jpg) | ![実行結果](https://user-images.githubusercontent.com/61136190/173851132-50c61934-9f33-4443-bbbc-0f50e8683bd6.jpg) |
+
+### 判別分析法（大津の2値化）
+
+#### 概要
+黒画素クラスに属する画素と白画素クラスに属する画素は、ある閾値tの左右で分かれて分布するが、その分布の分離度が大きくなるように閾値tを決める方法が判別分析法である。分離度は、クラス間分散とクラス内分散の比で定義される。
+#### 処理手順
+
+1．入力画像にグレースケールを掛ける。
+
+2．
+
+3．
+
+4．
+
+#### 実行結果
+
+|ヒストグラム（閾値：176）|
+| - |
+| ![Figure_otsu](https://user-images.githubusercontent.com/61136190/173856209-5f4f2ade-e0c4-4306-8168-e01c2c2060ed.png) |
+
+| 入力画像 | 実行結果 |
+| - | - |
+| ![入力画像](https://user-images.githubusercontent.com/61136190/173845134-56aa0453-2124-4c68-8ffc-deea4a798666.jpg) | ![実行結果](https://user-images.githubusercontent.com/61136190/173855818-03bf1849-6d31-4f63-87ab-2e3152688431.jpg) |
 
 ## フィルタの種類
 
@@ -886,3 +978,4 @@
 - [pythonで一から画像処理 (5)フーリエ変換](https://qiita.com/fugunoko/items/41c33ca163c7bb52d283)
 - [PythonのSciPyでバンドストップフィルタをかける!](https://watlab-blog.com/2019/05/01/scipy-bandstop/)
 - [What parameters can a fourier transformation have? / How to process the shifted result?](https://stackoverflow.com/questions/34841808/what-parameters-can-a-fourier-transformation-have-how-to-process-the-shifted)
+- [2値化処理 – blog - 村上真研究室](http://makotomurakami.com/blog/2020/08/06/6534/)

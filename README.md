@@ -250,7 +250,7 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 | 入力画像 | 実行結果 |
 | - | - |
-|  |  |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![poster_pc_tonecurve](https://user-images.githubusercontent.com/61136190/174352159-4e9adf9c-3c85-4229-97ae-c775e4ecf157.jpg) |
 
 ### 累乗型トーカーブ
 

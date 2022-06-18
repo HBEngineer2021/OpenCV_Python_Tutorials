@@ -253,6 +253,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
 | 入力画像 | グラフ | 実行結果 |
@@ -273,6 +281,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
 | 入力画像 | グラフ | 実行結果（ヒストグラム付き） |
@@ -285,6 +301,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
 | 入力画像 | グラフ | ヒストグラム | 実行結果 |
@@ -296,6 +320,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 #### 概要
 
 #### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
 
 #### 実行結果
 
@@ -310,6 +342,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
 | 入力画像 | グラフ | ヒストグラム | 実行結果 |
@@ -322,7 +362,31 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
+
+| 入力画像 | グラフ | ヒストグラム |
+| - | - | - |
+| ![original](https://user-images.githubusercontent.com/61136190/174429832-0eb7224c-4c32-436a-96e2-291f734c6eed.png) | ![posterization_graph_original](https://user-images.githubusercontent.com/61136190/174436022-ea7fdfb8-2b2a-4ab8-8560-cac149b74e75.png) | ![posterization_histogram_original](https://user-images.githubusercontent.com/61136190/174436032-ed660ce0-d904-4635-a46b-8cd2ebf9d43c.png) |
+
+| 実行結果（64階調） | グラフ | ヒストグラム |
+| - | - | - |
+| ![posterization_64](https://user-images.githubusercontent.com/61136190/174435372-a51d3730-8924-4587-ae19-97a78ff05895.png) | ![posterization_graph_64](https://user-images.githubusercontent.com/61136190/174435592-e29f3ca0-de13-4691-9514-8a5494e7f02a.png) | ![posterization_histogram_64](https://user-images.githubusercontent.com/61136190/174435609-2a7f71b6-7145-4277-a1d8-6b903d6e86bb.png) |
+
+| 実行結果（32階調） | グラフ | ヒストグラム |
+| - | - | - |
+| ![posterization_32](https://user-images.githubusercontent.com/61136190/174435556-692abe5a-e472-4a84-af41-12d7f1dbaeb4.png) | ![posterization_graph_32](https://user-images.githubusercontent.com/61136190/174435621-e5e500f0-41e5-41ef-b533-891183d165ad.png) | ![posterization_histogram_32](https://user-images.githubusercontent.com/61136190/174435631-47b2701d-2ea7-487c-8724-913a340699b5.png) |
+
+| 実行結果（16階調） | グラフ | ヒストグラム |
+| - | - | - |
+| ![posterization_16](https://user-images.githubusercontent.com/61136190/174435563-8793422f-2a33-49f0-9b53-d29ce669efb3.png) | ![posterization_graph_16](https://user-images.githubusercontent.com/61136190/174435642-4b4e5bea-8661-471b-af6b-fb8391287035.png) | ![posterization_histogram_16](https://user-images.githubusercontent.com/61136190/174435711-2a762e59-1b4b-4f8e-b000-72fc4c2153a4.png) |
 
 ### ソラリゼーション
 
@@ -330,17 +394,37 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
-| 入力画像 | 実行結果 |
-| - | - |
-|  |  |
+| 入力画像 | トーンカーブ | ヒストグラム |
+| - | - | - |
+| ![original](https://user-images.githubusercontent.com/61136190/174429832-0eb7224c-4c32-436a-96e2-291f734c6eed.png) | ![posterization_graph_original](https://user-images.githubusercontent.com/61136190/174436022-ea7fdfb8-2b2a-4ab8-8560-cac149b74e75.png) | ![posterization_histogram_original](https://user-images.githubusercontent.com/61136190/174436032-ed660ce0-d904-4635-a46b-8cd2ebf9d43c.png) |
+
+| 実行結果 | トーンカーブ | ヒストグラム |
+| - | - | - |
+| ![solarization](https://user-images.githubusercontent.com/61136190/174436814-97711bd7-2e57-42f6-8f02-89cd61a83129.png) | ![solarization_tone_curve](https://user-images.githubusercontent.com/61136190/174436899-5bd6e558-5c53-4dc7-a7c0-ca33c9b8edb8.png) | ![solarization_histogram](https://user-images.githubusercontent.com/61136190/174436881-e9c6477d-3182-4a45-88cf-5368dd34b636.png) |
 
 ### RGB トーンカーブ
 
 #### 概要
 
 #### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
 
 #### 実行結果
 
@@ -354,17 +438,33 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
-| 入力画像 | 実行結果 |
-| - | - |
-|  |  |
+| 入力画像 | トーンカーブ | 実行結果 |
+| - | - | - |
+| ![original](https://user-images.githubusercontent.com/61136190/174429832-0eb7224c-4c32-436a-96e2-291f734c6eed.png) | ![pseudo-color_tone-curve](https://user-images.githubusercontent.com/61136190/174438040-ed657cc8-6586-4957-997b-8d5596658c87.png) | ![pseudo-color](https://user-images.githubusercontent.com/61136190/174438054-9185d95c-f973-40f0-a780-0beb517310a9.png) |
 
 ### 色相・彩度・明度
 
 #### 概要
 
 #### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
 
 #### 実行結果
 
@@ -378,6 +478,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 処理手順
 
+1．
+
+2．
+
+3．
+
+4．
+
 #### 実行結果
 
 | 入力画像 | 実行結果 |
@@ -389,6 +497,14 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 #### 概要
 
 #### 処理手順
+
+1．
+
+2．
+
+3．
+
+4．
 
 #### 実行結果
 

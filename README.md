@@ -1,8 +1,9 @@
 
 <div align="center">
   
-![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)　
+![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)　　　
 ![python-logo](https://www.python.org/static/img/python-logo.png)
+![Tutorials-removebg-preview](https://user-images.githubusercontent.com/61136190/174431146-84db017b-06be-43f0-a9e1-715a17235004.png)
   
 </div>
 
@@ -310,6 +311,10 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 #### 処理手順
 
 #### 実行結果
+
+| 入力画像 | グラフ | ヒストグラム | 実行結果 |
+| - | - | - | - |
+| ![original](https://user-images.githubusercontent.com/61136190/174429832-0eb7224c-4c32-436a-96e2-291f734c6eed.png) | ![negative-positive reversal_graph](https://user-images.githubusercontent.com/61136190/174434380-1c83a0de-f1b4-4d5a-974e-e1252e158676.png) | ![negative-positive reversal_histogram](https://user-images.githubusercontent.com/61136190/174434391-96d405b3-798b-4d44-a5bd-2882974c8c47.png) | ![original_negative-positive reversal](https://user-images.githubusercontent.com/61136190/174434163-c8ed3109-1bc6-48fd-b267-81c56cc76c1c.png) |
 
 ### ポスタリゼーション
 

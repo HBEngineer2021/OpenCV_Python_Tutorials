@@ -1,6 +1,12 @@
 
-![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)
+<div align="center">
+  
+![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)　
 ![python-logo](https://www.python.org/static/img/python-logo.png)
+  
+</div>
+
+
 
 # OpenCV_Python_Tutorials
 
@@ -248,9 +254,17 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 実行結果
 
-| 入力画像 | 実行結果 |
-| - | - |
-| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![poster_pc_tonecurve](https://user-images.githubusercontent.com/61136190/174352159-4e9adf9c-3c85-4229-97ae-c775e4ecf157.jpg) |
+| 入力画像 | グラフ | 実行結果 |
+| - | - | - |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![tone_curve_histgram1](https://user-images.githubusercontent.com/61136190/174424135-ec94b4a5-5529-4e06-b511-5201c2676d43.png) | ![poster_pc_tonecurve](https://user-images.githubusercontent.com/61136190/174352159-4e9adf9c-3c85-4229-97ae-c775e4ecf157.jpg) |
+
+| 入力画像 | グラフ | 実行結果 |
+| - | - | - |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![tone_curve_histgram2](https://user-images.githubusercontent.com/61136190/174424447-0bf3ac39-0d2a-4f35-bd74-359ea4a3c9b3.png) | ![poster_pc_tonecurve2](https://user-images.githubusercontent.com/61136190/174424386-3a4f02a7-8cb5-4ea3-9fff-894d9b44fdef.jpg) |
+
+| 入力画像 | グラフ | 実行結果 |
+| - | - | - |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![tone_curve_histgram3](https://user-images.githubusercontent.com/61136190/174425462-765e6f93-96f9-41bb-ae7a-7faacbba770e.png) | ![poster_pc_tonecurve3](https://user-images.githubusercontent.com/61136190/174425479-390a1cae-e9f5-4139-a434-8df4cc90583d.jpg) |
 
 ### 累乗型トーカーブ
 
@@ -260,10 +274,10 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 実行結果
 
-| 入力画像 | 実行結果 |
-| - | - |
-|  |  |
-
+| 入力画像 | グラフ | 実行結果（ヒストグラム付き） |
+| - | - | - |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![gamma_histgram](https://user-images.githubusercontent.com/61136190/174426501-a9ef5468-423c-432a-bdf7-2c46b7f1d05e.png) | ![poster_pc_gamma](https://user-images.githubusercontent.com/61136190/174426487-8f80fc09-ba34-4699-8f21-d5f393a0393d.jpg) |
+ 
 ### S字トーンカーブ
 
 #### 概要
@@ -272,9 +286,9 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 実行結果
 
-| 入力画像 | 実行結果 |
-| - | - |
-|  |  |
+| 入力画像 | グラフ | ヒストグラム | 実行結果 |
+| - | - | - | - |
+| ![poster_pc jpg_origin](https://user-images.githubusercontent.com/61136190/174352610-f4671ac1-cf30-4c80-8099-938d49083916.jpg) | ![s_tone_curve_graph](https://user-images.githubusercontent.com/61136190/174427045-997bff47-4f4c-459d-8856-a5d158435998.png) | ![s_tone_curve_histgram](https://user-images.githubusercontent.com/61136190/174427057-bad5c8e4-9531-49e7-8c12-ef9b92277948.png) | ![poster_p_s_tone_curve](https://user-images.githubusercontent.com/61136190/174426991-84504aef-0d26-4f32-93a5-7317255fc5e5.jpg) |
 
 ### ヒストグラム平坦化
 
@@ -284,6 +298,11 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 
 #### 実行結果
 
+| 入力画像 | 実行結果 |
+| - | - |
+| ![original](https://user-images.githubusercontent.com/61136190/174429832-0eb7224c-4c32-436a-96e2-291f734c6eed.png) | ![original2](https://user-images.githubusercontent.com/61136190/174429911-0f09873a-d45c-4799-aa04-121800c91e5b.png) |
+| ![original_histgram](https://user-images.githubusercontent.com/61136190/174429903-17157d3f-9a57-4bf1-a9df-f3babeab335e.png) | ![original_ equalize-histogram](https://user-images.githubusercontent.com/61136190/174429920-1252ae42-e0d9-49ec-92e3-c2999ac14a17.png) |
+
 ### 濃淡の反転
 
 #### 概要
@@ -291,10 +310,6 @@ Windowsの場合は、インストールされていないのでPythonの導入�
 #### 処理手順
 
 #### 実行結果
-
-| 入力画像 | 実行結果 |
-| - | - |
-|  |  |
 
 ### ポスタリゼーション
 

@@ -22,6 +22,10 @@
 
 https://www.cgarts.or.jp/kentei/about/img_engineer/index.html
 
+数式は、以下の数式エディタで作成しました。
+
+https://www.codecogs.com/eqneditor
+
 ## 目次
 
 <details><summary>環境構築</summary>
@@ -107,6 +111,14 @@ https://www.cgarts.or.jp/kentei/about/img_engineer/index.html
   - [カルマンフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%82%AB%E3%83%AB%E3%83%9E%E3%83%B3%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [パーティクルフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%91%E3%83%BC%E3%83%86%E3%82%A3%E3%82%AF%E3%83%AB%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
   - [ブーストラップフィルタ](https://github.com/HBEngineer2021/OpenCV_Python_Tutorials#%E3%83%96%E3%83%BC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%83%E3%83%97%E3%83%95%E3%82%A3%E3%83%AB%E3%82%BF)
+</details>
+
+<details><summary>画像の復元と生成</summary>
+
+- [画像の復元と生成]()
+  - [ぼけ・ぶれ画像の復元]()
+    - []()
+  
 </details>
 
 <details><summary>幾何学的変換一覧</summary>
@@ -1545,6 +1557,113 @@ p-タイル法は、画像中の文字を占める領域の画像数が、文字
 | 入力画像 | 実行結果 |
 | - | - |
 |  |  |
+
+## 画像の復元と生成
+
+### ぼけ・ぶれ画像の復元
+
+#### 概要
+
+原画像に対して __点拡がり関数（Point Spread Function：PSF）__ を使用することで、劣化画像を作成することが可能である。
+
+劣化画像のモデル化には、以下の2つある。
+
+1．**焦点ぼけによる劣化に対する点拡がり関数のモデル化**
+
+2．**カメラのぶれによる劣化に対する点拡がり関数のモデル化**
+
+上記のモデル化により作成された劣化画像を復元する方法は、以下の2つある。
+
+1．**逆フィルタ**
+
+2．**ウィーナーフィルタ**
+
+上記のフィルタを活用することで、ぼけやぶれに考慮した復元画像を作成することが可能である。
+
+#### 点拡がり関数のモデル化とパラメータ
+
+**焦点ぼけによる劣化に対する点拡がり関数のモデル化**
+
+●　**概要**
+
+点であったものが拡がりをもつようになる劣化。
+
+この拡がりは、方向によらず一定。
+
+拡がりが大きくなれば、劣化画像のぼけも大きくなる。
+
+ローパスフィルタと同じ分布。
+
+●　**数式**
+
+![point_spread_function](https://user-images.githubusercontent.com/61136190/174818084-8d2c1e38-4a6b-4519-a91b-d667c74215b0.png)
+
+●　**実行結果**
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+**カメラのぶれによる劣化に対する点拡がり関数のモデル化**
+
+●　**概要**
+
+カメラのぶれも、焦点ぼけと同様に、原画像の1点がある範囲に拡がっていること。
+
+カメラの動きは任意に考えられるので、すべてのカメラのぶれを表すモデルは単純ではない。
+
+ある方向に対して、ぶれが生じる。
+
+●　**数式**
+
+![point_spread_function2](https://user-images.githubusercontent.com/61136190/174837550-0dc378b1-6fd4-4b6b-a98a-708a9c589202.png)
+
+●　**実行結果**
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+**逆フィルタ**
+
+●　**概要**
+
+劣化画像の2次元フーリエ変換を <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}G\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}G\left ( u,v \right )" /> 、原画像の2次元フーリエ変換を <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}F\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}F\left ( u,v \right )" /> 、点拡がり関数の2次元フーリエ変換を <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}H\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}H\left ( u,v \right )" /> 、逆フィルタを <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}K_{inv}\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}K_{inv}\left ( u,v \right )" /> と表す。
+
+劣化画像の2次元フーリエ変換 <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}G\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}G\left ( u,v \right )" /> は、原画像の2次元フーリエ変換 <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}F\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}F\left ( u,v \right )" /> と 点拡がり関数の2次元フーリエ変換 <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}H\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}H\left ( u,v \right )" />の積で表すことが可能である。
+
+劣化画像の2次元フーリエ変換 <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}G\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}G\left ( u,v \right )" /> に逆フィルタ <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}K_{inv}\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}K_{inv}\left ( u,v \right )" />を適用することで、原画像の2次元フーリエ変換 <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}F\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}F\left ( u,v \right )" /> を表すことが可能である。
+
+逆フィルタ <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}K_{inv}\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}K_{inv}\left ( u,v \right )" />が発散し、劣化画像に含まれるノイズが増幅され、復元画像に大きなノイズが生じる。
+
+●　**数式**
+
+**逆フィルタ**
+
+![inverse_filter](https://user-images.githubusercontent.com/61136190/174847435-1d20e715-bae0-4b8f-9f83-f16145b49d43.png)
+
+**劣化画像に逆フィルタを適用**
+
+![inverse_filter_deterioration](https://user-images.githubusercontent.com/61136190/174849181-85f2bb4b-03d6-482c-a458-d1f1fa12e6b3.png)
+
+●　**実行結果**
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
+**ウィーナーフィルタ**
+
+●　**概要**
+
+●　**数式**
+
+●　**実行結果**
+
+| 入力画像 | 実行結果 |
+| - | - |
+|  |  |
+
 
 ## リンク
 - [OpenCVを使った画像処理](http://labs.eecs.tottori-u.ac.jp/sd/Member/oyamada/OpenCV/html/py_tutorials/py_imgproc/py_table_of_contents_imgproc/py_table_of_contents_imgproc.html#py-table-of-content-imgproc)

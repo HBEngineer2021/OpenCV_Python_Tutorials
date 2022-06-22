@@ -1652,11 +1652,33 @@ p-タイル法は、画像中の文字を占める領域の画像数が、文字
 | - | - |
 |  |  |
 
-**ウィーナーフィルタ**
+**ウィーナフィルタ**
 
 ●　**概要**
 
+ノイズの2次元フーリエ変換を<img src="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}N\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}N\left ( u,v \right )" />、ウィーナフィルタを<img src="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}K_{w}\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}K_{w}\left ( u,v \right )" />と表す。
+
+逆フィルタ <img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}K_{inv}\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}K_{inv}\left ( u,v \right )" />が発散し、劣化画像に含まれるノイズが増幅され、復元画像に大きなノイズが生じる。
+
+そこで、この影響を避けるため、<img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}H\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}H\left ( u,v \right )" />が0に近いときに発散しないフィルタを使用する必要がある。
+
 ●　**数式**
+
+**ノイズに考慮した劣化画像の表現**
+
+上記を考慮した劣化画像は、以下のように表すことが可能である。
+
+![noise_fft](https://user-images.githubusercontent.com/61136190/175033726-5d2d08b0-fc8a-4b60-9d9a-8412d88320b0.png)
+
+**ウィーナフィルタ**
+
+復元画像と原画像の差を最小にするフィルタは、以下のように表すことが可能である。
+
+![wiener_filter](https://user-images.githubusercontent.com/61136190/175037204-cdfa769e-bbb9-4825-a565-feb7a1bbdb7e.png)
+
+実際には、ノイズ<img src="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}N\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}N\left ( u,v \right )" />と原画像<img src="https://latex.codecogs.com/png.image?\inline&space;\large&space;\dpi{100}\bg{white}F\left&space;(&space;u,v&space;\right&space;)" title="https://latex.codecogs.com/png.image?\inline \large \dpi{100}\bg{white}F\left ( u,v \right )" />は未知であるため、代わりに、定数<img src="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}\Gamma&space;" title="https://latex.codecogs.com/png.image?\dpi{110}\bg{white}\Gamma " />を置き、以下のように表現することが多い。
+
+![other_wiener_filter](https://user-images.githubusercontent.com/61136190/175038555-29ebf08c-1a7c-4af5-89d0-2d9f8e4cf904.png)
 
 ●　**実行結果**
 

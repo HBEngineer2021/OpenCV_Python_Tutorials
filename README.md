@@ -15,6 +15,8 @@
 ![opencv](https://img.shields.io/badge/OpenCV-v3.7-ff7964.svg)
 ![anaconda](https://img.shields.io/badge/Anaconda-v3.7-2f5d50.svg)
 ![pycharm](https://img.shields.io/badge/PyCharm-v3.7-3eb370.svg)
+![youtube](https://img.shields.io/youtube/channel/views/UC_8z3olTkwAZ8yjdyccI-Dw?style=social)
+![twitter](https://img.shields.io/twitter/follow/HB_itprog?style=social)
 
 画像処理エンジニア検定の学習用に作成しました。
 
@@ -2061,3 +2063,4 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [2値化処理 – blog - 村上真研究室](http://makotomurakami.com/blog/2020/08/06/6534/)
 - [python+opencvで画像処理の勉強2 画素ごとの濃淡変換](https://qiita.com/tanaka_benkyo/items/11a9b99b4703516711e3)
 - [matplotlib – 画像やヒートマップを表示する imshow の使い方](https://pystyle.info/matplotlib-imshow/)
+- [疑似カラー(Pseudo-color) ](https://imagingsolution.net/imaging/pseudo-color/)

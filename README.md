@@ -4,12 +4,6 @@
 ![opencv-logo](https://opencv.org/wp-content/uploads/2022/05/logo.png)　　　
 ![python-logo](https://www.python.org/static/img/python-logo.png)
 ![Tutorials-removebg-preview](https://user-images.githubusercontent.com/61136190/174431146-84db017b-06be-43f0-a9e1-715a17235004.png)
-  
-</div>
-
-
-
-# OpenCV_Python_Tutorials
 
 ![python](https://img.shields.io/badge/python-v3.7-84a2d4.svg)
 ![opencv](https://img.shields.io/badge/OpenCV-v3.7-ff7964.svg)
@@ -17,6 +11,10 @@
 ![pycharm](https://img.shields.io/badge/PyCharm-v3.7-3eb370.svg)
 ![youtube](https://img.shields.io/youtube/channel/views/UC_8z3olTkwAZ8yjdyccI-Dw?style=social)
 ![twitter](https://img.shields.io/twitter/follow/HB_itprog?style=social)
+
+# OpenCV_Python_Tutorials
+
+</div>
 
 画像処理エンジニア検定の学習用に作成しました。
 

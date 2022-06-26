@@ -2062,3 +2062,4 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [python+opencvで画像処理の勉強2 画素ごとの濃淡変換](https://qiita.com/tanaka_benkyo/items/11a9b99b4703516711e3)
 - [matplotlib – 画像やヒートマップを表示する imshow の使い方](https://pystyle.info/matplotlib-imshow/)
 - [疑似カラー(Pseudo-color) ](https://imagingsolution.net/imaging/pseudo-color/)
+- [【CG・CV入門】拡散反射と鏡面反射の特徴](https://www.momoyama-usagi.com/entry/info-cv01)

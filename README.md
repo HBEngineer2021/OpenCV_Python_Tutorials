@@ -2063,3 +2063,4 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [matplotlib – 画像やヒートマップを表示する imshow の使い方](https://pystyle.info/matplotlib-imshow/)
 - [疑似カラー(Pseudo-color) ](https://imagingsolution.net/imaging/pseudo-color/)
 - [【CG・CV入門】拡散反射と鏡面反射の特徴](https://www.momoyama-usagi.com/entry/info-cv01)
+- [電気通信大学情報理工学研究科 コンピュータグラフィックス](https://satoh.cs.uec.ac.jp/ja/lecture/ComputerGraphics/)

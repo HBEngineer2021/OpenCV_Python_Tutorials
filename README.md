@@ -2064,3 +2064,5 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [疑似カラー(Pseudo-color) ](https://imagingsolution.net/imaging/pseudo-color/)
 - [【CG・CV入門】拡散反射と鏡面反射の特徴](https://www.momoyama-usagi.com/entry/info-cv01)
 - [電気通信大学情報理工学研究科 コンピュータグラフィックス](https://satoh.cs.uec.ac.jp/ja/lecture/ComputerGraphics/)
+- [http://www.catnet.ne.jp/triceps/cdr/sample/ws264.pdf](http://www.catnet.ne.jp/triceps/cdr/sample/ws264.pdf)
+- [【デジタル画像のデータ量】](http://www.clg.niigata-u.ac.jp/~medimg/practice_medical_imaging/imgproc_imagej/imgproc_imageJ/1sampling/index.html)

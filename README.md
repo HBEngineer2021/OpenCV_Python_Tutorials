@@ -2066,3 +2066,4 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [電気通信大学情報理工学研究科 コンピュータグラフィックス](https://satoh.cs.uec.ac.jp/ja/lecture/ComputerGraphics/)
 - [http://www.catnet.ne.jp/triceps/cdr/sample/ws264.pdf](http://www.catnet.ne.jp/triceps/cdr/sample/ws264.pdf)
 - [【デジタル画像のデータ量】](http://www.clg.niigata-u.ac.jp/~medimg/practice_medical_imaging/imgproc_imagej/imgproc_imageJ/1sampling/index.html)
+- [はじめての多重解像度解析 その2 二次元画像の変換](https://qiita.com/kaityo256/items/ace2bd13aab5638cf9be)

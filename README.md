@@ -2068,3 +2068,4 @@ __勾配法__ は、連続する2枚の画像での対象物の移動量が微�
 - [【デジタル画像のデータ量】](http://www.clg.niigata-u.ac.jp/~medimg/practice_medical_imaging/imgproc_imagej/imgproc_imageJ/1sampling/index.html)
 - [はじめての多重解像度解析 その2 二次元画像の変換](https://qiita.com/kaityo256/items/ace2bd13aab5638cf9be)
 - [第8回　照度の性質　「照度」の距離依存性と入射角依存性について](https://www.ccs-inc.co.jp/guide/column/light_color/vol08.html)
+- [カメラの撮影範囲の計算](https://keisan.casio.jp/exec/system/1378430392)
